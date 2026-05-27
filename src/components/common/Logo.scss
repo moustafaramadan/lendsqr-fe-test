@@ -1,0 +1,19 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  background: transparent;
+
+  img {
+    display: block;
+    width: 174px;
+    height: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .logo img {
+    width: 132px;
+  }
+}

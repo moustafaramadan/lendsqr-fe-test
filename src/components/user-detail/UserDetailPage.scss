@@ -1,0 +1,168 @@
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  border: 0;
+  padding: 0;
+  color: var(--muted);
+  background: transparent;
+  font-size: 14px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.danger-outline,
+.success-outline {
+  min-height: 44px;
+  border-radius: 14px;
+  padding: 0 18px;
+  background: var(--surface);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.danger-outline {
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+.success-outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.profile-card {
+  padding: 32px 32px 0;
+}
+
+.profile-summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 28px;
+  min-height: 120px;
+
+  img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: rgba(33, 63, 125, 0.12);
+  }
+
+  h2,
+  h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+
+  p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+}
+
+.tier-block {
+  display: grid;
+  gap: 10px;
+  border-left: 1px solid rgba(84, 95, 125, 0.18);
+  border-right: 1px solid rgba(84, 95, 125, 0.18);
+  padding: 0 28px;
+
+  span {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  color: #e9b200;
+}
+
+.profile-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 42px;
+  overflow-x: auto;
+
+  button {
+    min-height: 52px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    color: rgba(33, 63, 125, 0.8);
+    background: transparent;
+    font-weight: 700;
+  }
+
+  .active {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}
+
+.details-panel {
+  padding: 32px;
+}
+
+@media (max-width: 760px) {
+  .profile-summary {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 18px;
+    min-height: auto;
+
+    img {
+      width: 76px;
+      height: 76px;
+    }
+  }
+
+  .detail-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .danger-outline,
+  .success-outline {
+    width: 100%;
+    min-height: 42px;
+    font-size: 12px;
+  }
+
+  .profile-tabs {
+    grid-template-columns: repeat(6, 150px);
+    gap: 0;
+    margin-top: 28px;
+
+    button {
+      min-height: 46px;
+      font-size: 13px;
+    }
+  }
+
+  .tier-block {
+    border-left: none;
+    border-right: none;
+    padding: 0;
+  }
+
+  .profile-card,
+  .details-panel {
+    padding: 22px 18px;
+  }
+
+  .profile-card {
+    padding-bottom: 0;
+  }
+}

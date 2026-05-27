@@ -1,0 +1,20 @@
+.primary-button {
+  min-height: 52px;
+  border: 0;
+  border-radius: 14px;
+  color: #ffffff;
+  background: var(--primary);
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.secondary-button {
+  min-height: 42px;
+  border: 0;
+  border-radius: 14px;
+  padding: 0 18px;
+  color: var(--text);
+  background: rgba(33, 63, 125, 0.1);
+  font-weight: 700;
+}
